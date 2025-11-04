@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
@@ -41,14 +40,15 @@ public class DialogueManager : MonoBehaviour
     {
         dialoguePanel.SetActive(true);
         currentDialogue = dialogueContainer;
+        
         currentLineIndex = 0;
         speakerText.text = currentDialogue.dialogueSet[0].speakerName;
         DisplayCurrentLine();
     }
 
-    public void DisplayCurrentLine()
+    private void DisplayCurrentLine()
     {
-        // Stop the old typing if it exists
+        // stop the old typing if it exists
         if (typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);
@@ -57,7 +57,7 @@ public class DialogueManager : MonoBehaviour
         speakerText.text = currentDialogue.dialogueSet[currentLineIndex].speakerName;
         string textToShow = currentDialogue.dialogueSet[currentLineIndex].dialogueLine;
     
-        // Start typing and store the coroutine
+        // start and store typing coroutine
         typingCoroutine = StartCoroutine(TypeText(textToShow));
     }
     
@@ -66,18 +66,18 @@ public class DialogueManager : MonoBehaviour
         isTyping = true;
         dialogueText.text = ""; 
     
-        // You need a loop here that goes through each character
-        // Hint: foreach (char letter in textToType)
+        // loop goes through each character
         foreach (char letter in textToType)
         {
             dialogueText.text += letter;
+            // play text audio here (single click)
             yield return new WaitForSeconds(typeSpeed);
         }
 
         isTyping = false;
     }
 
-    public void NextLine()
+    private void NextLine()
     {
         if (isTyping)
         {
@@ -86,7 +86,7 @@ public class DialogueManager : MonoBehaviour
             isTyping = false;
             return;
         }
-        else if (currentLineIndex+1 < currentDialogue.dialogueSet.Length && !isTyping)
+        if (currentLineIndex+1 < currentDialogue.dialogueSet.Length && !isTyping)
         {
             currentLineIndex++;
             DisplayCurrentLine();
@@ -97,7 +97,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EndDialogue()
+    private void EndDialogue()
     {
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
