@@ -1,0 +1,11 @@
+﻿For my final game project, I want to make a puzzle platformer game inspired by the game below.
+https://teambeanloop.itch.io/six-cats-under
+
+
+The game above is a point and click puzzle where you interact with the environment to solve puzzles. When you click on an item, a dialogue box pops up and tells you about the item and gives hints on what it could unlock or be used for.
+
+
+For my game, I want to use the same mechanic but for a platformer style game instead of a point and click. The player will control a character around the map, and once they get near an interactable object, an icon will pop up, prompting the player to press the button and read the dialogue for the item. The player character can also switch to a ‘spirit’ or ‘ghost’ mode where they can temporarily pass through walls and see/interact with things that you can’t normally see in your human form. The goal of the game will be to escape the house/dungeon.
+
+
+In this early prototype, I have made a dialogue system where you can interact with objects by clicking on them, and then press a button to move on to the next line. Once all the lines have been displayed, the dialogue box will close.
