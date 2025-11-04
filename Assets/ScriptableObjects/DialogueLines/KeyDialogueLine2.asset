@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: KeyDialogueLine2
   m_EditorClassIdentifier: 
   speakerName: Key
-  dialogueLine: This could be used to open a door
+  dialogueLine: This could be used to open a door.
