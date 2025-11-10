@@ -2,6 +2,8 @@
 
 A designer-friendly dialogue system for Unity that uses ScriptableObjects for easy content creation and a typewriter effect for immersive text display.
 
+![2025-11-1016-57-40online-video-cutter com-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d4b98f50-a64e-4750-a9b9-76f55639d69b)
+
 ## Features
 
 - **ScriptableObject-based architecture** - Create and manage dialogue content directly in the Unity Editor
